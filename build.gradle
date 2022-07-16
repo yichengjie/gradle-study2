@@ -49,35 +49,3 @@ subprojects {
 }
 
 
-task showMeTheMoney{
-    println("show me the money")
-}
-
-task myCopy(type: Copy){
-    from './build/libs/hello-gradle.jar'
-    into './test/'
-}
-
-task showArgs{
-    println('Hello World')
-}
-
-task A(dependsOn: 'B'){
-
-    doFirst{
-        println("this is A")
-    }
-}
-
-task B{
-    doFirst {
-        println("this is B")
-    }
-}
-
-task copyJar(type: Copy){
-    // 清除现有的lib目录
-    delete "$buildDir/libs/lib"
-}
-
-
