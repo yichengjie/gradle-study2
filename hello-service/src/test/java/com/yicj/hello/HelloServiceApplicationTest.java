@@ -7,13 +7,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @Slf4j
-@SpringBootTest
 @RunWith(SpringRunner.class)
-public class HelloApplicationTest {
+@SpringBootTest(classes = HelloServiceApplication.class)
+public class HelloServiceApplicationTest {
 
     @Test
     public void hello(){
-       log.info("hello world ...");
+        log.info("hello world ...");
     }
-
 }

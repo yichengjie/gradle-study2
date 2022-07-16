@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
 @SpringBootApplication
-public class HelloApplication {
+public class HelloServiceApplication {
 
     public static void main(String[] args) {
-        log.info("hello world");
-        //SpringApplication.run(HelloApplication.class, args) ;
+        log.info("-----> hello world ");
+        SpringApplication.run(HelloServiceApplication.class, args) ;
     }
 }
