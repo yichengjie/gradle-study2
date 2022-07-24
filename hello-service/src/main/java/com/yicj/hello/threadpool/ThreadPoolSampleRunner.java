@@ -1,4 +1,4 @@
-package com.yicj.hello.runner;
+package com.yicj.hello.threadpool;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class MyAppRunner implements ApplicationRunner {
+public class ThreadPoolSampleRunner implements ApplicationRunner {
 
     @Autowired
     private ThreadPoolTaskExecutor customAsyncThreadPool ;

@@ -1,10 +1,10 @@
-package com.yicj.hello.util;
+package com.yicj.hello.threadpool;
 
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.ThreadPoolExecutor;
 
-public class CommonUtil {
+public class ThreadPoolUtil {
 
     public static ThreadPoolTaskExecutor initThreadPool(){
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();

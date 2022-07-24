@@ -1,6 +1,5 @@
-package com.yicj.hello.config;
+package com.yicj.hello.threadpool;
 
-import com.yicj.hello.util.CommonUtil;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
@@ -13,7 +12,7 @@ public class ThreadPoolTaskExecutorImportRegister implements ImportBeanDefinitio
     @Override
     public void registerBeanDefinitions(AnnotationMetadata annotationMetadata, BeanDefinitionRegistry registry) {
         RootBeanDefinition beanDefinition = new RootBeanDefinition(ThreadPoolTaskExecutor.class, ()->{
-            ThreadPoolTaskExecutor executor = CommonUtil.initThreadPool();
+            ThreadPoolTaskExecutor executor = ThreadPoolUtil.initThreadPool();
             return executor;
         }) ;
         registry.registerBeanDefinition("customAsyncThreadPool", beanDefinition) ;

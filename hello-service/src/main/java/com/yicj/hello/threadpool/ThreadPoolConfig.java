@@ -1,6 +1,5 @@
-package com.yicj.hello.config;
+package com.yicj.hello.threadpool;
 
-import com.yicj.hello.util.CommonUtil;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -11,7 +10,7 @@ import java.util.concurrent.Executor;
 
 @Configuration
 //@Import(ThreadPoolTaskExecutorImportRegister.class)
-public class AsyncScheduledTaskConfig {
+public class ThreadPoolConfig {
 
 //    @Bean
 //    public ThreadPoolTaskExecutorFactoryBean customAsyncThreadPool(){
@@ -20,7 +19,7 @@ public class AsyncScheduledTaskConfig {
 
     @Bean("customAsyncThreadPool")
     public ThreadPoolTaskExecutor customAsyncThreadPool() {
-        ThreadPoolTaskExecutor executor = CommonUtil.initThreadPool();
+        ThreadPoolTaskExecutor executor = ThreadPoolUtil.initThreadPool();
         executor.initialize();
         return executor ;
     }

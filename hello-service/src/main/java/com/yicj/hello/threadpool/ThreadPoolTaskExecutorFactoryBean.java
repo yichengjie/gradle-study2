@@ -1,6 +1,5 @@
-package com.yicj.hello.config;
+package com.yicj.hello.threadpool;
 
-import com.yicj.hello.util.CommonUtil;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
@@ -9,7 +8,7 @@ public class ThreadPoolTaskExecutorFactoryBean implements FactoryBean<ThreadPool
 
     @Override
     public ThreadPoolTaskExecutor getObject() throws Exception {
-        ThreadPoolTaskExecutor executor = CommonUtil.initThreadPool();
+        ThreadPoolTaskExecutor executor = ThreadPoolUtil.initThreadPool();
         return executor ;
     }
 
