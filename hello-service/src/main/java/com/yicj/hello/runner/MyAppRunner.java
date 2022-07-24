@@ -6,19 +6,20 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class MyAppRunner implements ApplicationRunner {
 
-    //@Autowired
-    //private ThreadPoolTaskExecutor customAsyncThreadPool ;
+    @Autowired
+    private ThreadPoolTaskExecutor customAsyncThreadPool ;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-//        customAsyncThreadPool.submit(() -> {
-//            System.out.println("-----------");
-//            System.out.println("-----------");
-//            System.out.println("-----------");
-//            System.out.println("-----------");
-//        }) ;
+        customAsyncThreadPool.execute(() -> {
+            System.out.println("-----------");
+            System.out.println("-----------");
+            System.out.println("-----------");
+            System.out.println("-----------");
+        }) ;
     }
 }
