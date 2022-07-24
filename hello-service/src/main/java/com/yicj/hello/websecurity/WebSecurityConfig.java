@@ -13,12 +13,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring()
-                .antMatchers("/hello") ;
+                .antMatchers("/favicon.ico") ;
 
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        super.configure(http);
+        http
+            .authorizeRequests()
+                .antMatchers("/hello").permitAll()
+                .anyRequest().authenticated()
+            .and()
+                .formLogin()
+            .and()
+                .httpBasic();
     }
 }
