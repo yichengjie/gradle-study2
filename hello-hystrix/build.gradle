@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.yicj.gradle'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation (group:'org.springframework.boot', name: 'spring-boot-starter-web')
+    implementation 'com.netflix.hystrix:hystrix-core:1.5.18'
+    implementation (group:'org.springframework.boot', name: 'spring-boot-starter-test')
+    implementation 'org.projectlombok:lombok:1.18.24'
+}
+
+test {
+    useJUnitPlatform()
+}
