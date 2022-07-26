@@ -17,4 +17,10 @@ public class CommandHelloWorld extends HystrixCommand<String> {
         // a real example would do work like a network call here
         return "Hello " + name + "!";
     }
+
+    @Override
+    protected String getFallback() {
+        Throwable exception = this.getFailedExecutionException();
+        return super.getFallback();
+    }
 }
