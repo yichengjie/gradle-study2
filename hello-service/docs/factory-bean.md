@@ -1,0 +1,3 @@
+1. AbstractBeanFactory extends FactoryBeanRegistrySupport
+2. FactoryBeanRegistrySupport中有一个FactoryBean的注册表factoryBeanObjectCache
+3. 当判断bean为FactoryBean时回先去factoryBeanObjectCache中获取
