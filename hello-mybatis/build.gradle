@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.yicj.gradle'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation (group:'org.springframework.boot', name: 'spring-boot-starter-web')
+    implementation (group:'org.springframework.boot', name: 'spring-boot-starter-jdbc')
+    implementation 'com.baomidou:mybatis-plus-boot-starter-test:3.5.2'
+    implementation 'com.baomidou:mybatis-plus-extension:3.5.2'
+    implementation 'mysql:mysql-connector-java'
+    implementation (group:'org.springframework.boot', name: 'spring-boot-starter-test')
+
+}
+
+test {
+    useJUnitPlatform()
+}

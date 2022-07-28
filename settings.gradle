@@ -6,4 +6,5 @@ pluginManagement {
 rootProject.name = 'hello-gradle'
 include 'hello-service'
 include 'hello-hystrix'
+include 'hello-mybatis'
 
